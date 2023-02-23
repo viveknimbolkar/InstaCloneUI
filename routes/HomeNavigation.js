@@ -13,6 +13,7 @@ export default function HomeNavigation() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
+        tabBarShowLabel: false,
         headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -20,22 +21,18 @@ export default function HomeNavigation() {
           if (route.name === "Home") {
             iconName = focused ? "home-sharp" : "home-outline";
           } else if (route.name === "Search") {
-            iconName = focused ? "list-sharp" : "list-outline";
-          } else if (route.name === "Notification") {
-            iconName = focused
-              ? "notifications-circle"
-              : "notifications-circle-outline";
+            iconName = focused ? "search-outline" : "search";
           } else if (route.name === "CreatePost") {
             iconName = focused ? "md-add-circle-outline" : "md-add-circle";
           } else if (route.name === "Reel") {
-            iconName = focused ? "person-outline" : "person-sharp";
+            iconName = focused ? "videocam-outline" : "videocam";
           } else if (route.name === "Profile") {
             iconName = focused ? "person-outline" : "person-sharp";
           }
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#EB4511",
+        tabBarActiveTintColor: "black",
       })}
     >
       <Tab.Screen name="Home" component={HomePage} />
