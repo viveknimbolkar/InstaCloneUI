@@ -28,7 +28,7 @@ export default function HomeNavigation() {
             } else if (route.name === "CreatePost") {
               iconName = focused ? "md-add-circle-outline" : "md-add-circle";
             } else if (route.name === "Reel") {
-              iconName = focused ? "videocam-outline" : "videocam";
+              iconName = focused ? "film-outline" : "film";
             } else if (route.name === "Profile") {
               iconName = focused ? "person-outline" : "person-sharp";
             }
