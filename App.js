@@ -1,7 +1,7 @@
 import "react-native-gesture-handler";
 import { enableScreens } from "react-native-screens";
-import Home from "./screen/Home";
-import Login from "./screen/Login";
+import HomeIndex from "./screen/home";
+import Login from "./screen/auth/Login";
 
 enableScreens();
 
@@ -19,7 +19,7 @@ export default function App() {
           animation: "slide_from_right",
         }}
       >
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home" component={HomeIndex} />
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>

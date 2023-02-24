@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text } from 'react-native'
-function HomePage() {
+function Home() {
   return (
     <Text>Ths is home</Text>
   )
 }
 
-export default HomePage
+export default Home
