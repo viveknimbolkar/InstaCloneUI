@@ -21,7 +21,7 @@ export default function HomeNavigation() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "Home") {
+            if (route.name === "HomeRoute") {
               iconName = focused ? "home-sharp" : "home-outline";
             } else if (route.name === "Search") {
               iconName = focused ? "search-outline" : "search";
@@ -38,7 +38,7 @@ export default function HomeNavigation() {
           tabBarActiveTintColor: "black",
         })}
       >
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="HomeRoute" component={Home} />
         <Tab.Screen name="Search" component={Search} />
         <Tab.Screen name="CreatePost" component={CreatePost} />
         <Tab.Screen name="Reel" component={Reel} />

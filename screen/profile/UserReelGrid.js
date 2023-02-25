@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text } from 'react-native'
-function UserReel() {
+function UserReelGrid() {
   return (
     <Text>reel</Text>
   )
 }
 
-export default UserReel
+export default UserReelGrid

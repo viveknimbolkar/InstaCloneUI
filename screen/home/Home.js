@@ -1,9 +1,8 @@
-import React from 'react'
-import { Text } from 'react-native'
+import React from "react";
+import { Text } from "react-native";
+import Post from "../../components/post";
 function Home() {
-  return (
-    <Text>Ths is home</Text>
-  )
+  return <Post />;
 }
 
-export default Home
+export default Home;

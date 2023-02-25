@@ -1,3 +1,4 @@
+import { Link } from "@react-navigation/native";
 import React from "react";
 import {
   View,
@@ -5,17 +6,21 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
+  Pressable,
 } from "react-native";
-function UserPost() {
+import PostNavigation from "../../routes/PostNavigation";
+function UserPostGrid({navigation}) {
   return (
     <>
       <SafeAreaView>
         <ScrollView>
           <View style={styles.postContainer}>
-            <Image
-              style={{ width: 120, height: 120 }}
-              source={{ uri: "https://via.placeholder.com/200/" }}
-            />
+            <Pressable onPress={()=>{navigation.navigate(PostNavigation)}}>
+              <Image
+                style={{ width: 120, height: 120 }}
+                source={{ uri: "https://via.placeholder.com/200/" }}
+              />
+            </Pressable>
             <Image
               style={{ width: 120, height: 120 }}
               source={{ uri: "https://via.placeholder.com/200/" }}
@@ -71,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UserPost;
+export default UserPostGrid;

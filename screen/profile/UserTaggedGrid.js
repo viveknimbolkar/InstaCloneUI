@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
-function UserTagged() {
+function UserTaggedGrid() {
   return (
     <>
       <View style={styles.postContainer}>
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UserTagged;
+export default UserTaggedGrid;

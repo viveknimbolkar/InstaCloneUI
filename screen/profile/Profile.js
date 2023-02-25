@@ -4,9 +4,9 @@ import { Appbar, Avatar, Button } from "react-native-paper";
 import Ionicon from "react-native-vector-icons/Ionicons";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import Home from "../home/Home";
-import UserReel from "./UserReel";
-import UserPost from "./UserPost";
-import UserTagged from "./UserTaggedPost";
+import UserReelGrid from "./UserReelGrid";
+import UserPostGrid from "./UserPostGrid";
+import UserTaggedGrid from "./UserTaggedGrid";
 const Tab = createMaterialTopTabNavigator();
 function Profile() {
   const [isStoryHightlightOpen, setIsStoryHightlightOpen] = useState(false);
@@ -78,7 +78,7 @@ function Profile() {
         >
           <Text style={{ fontWeight: "900" }}>Story Highlights</Text>
           <Ionicon
-            name={`${isStoryHightlightOpen ? "arrow-down" : "arrow-up"}`}
+            name={`${isStoryHightlightOpen ? "arrow-up" : "arrow-down"}`}
           />
         </View>
         {isStoryHightlightOpen && (
@@ -99,9 +99,9 @@ function Profile() {
           tabBarShowIcon: true,
         }}
       >
-        <Tab.Screen name="Post" component={UserPost} />
-        <Tab.Screen name="Reel" component={UserReel} />
-        <Tab.Screen name="Tag" component={UserTagged} />
+        <Tab.Screen name="Post" component={UserPostGrid} />
+        <Tab.Screen name="Reel" component={UserReelGrid} />
+        <Tab.Screen name="Tagged" component={UserTaggedGrid} />
       </Tab.Navigator>
     </>
   );

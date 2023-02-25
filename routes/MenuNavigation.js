@@ -18,7 +18,7 @@ export default function MenuNavigation() {
         }}
       >
         {/* conflict may be happen because of the same route name as Home */}
-        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="HomeRoute" component={Home} />
       </Drawer.Navigator>
     </>
   );
