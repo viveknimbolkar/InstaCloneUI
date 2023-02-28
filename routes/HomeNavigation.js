@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { StatusBar } from "react-native";
-
+import ProfileNavigation from "../routes/ProfileNavigation";
 import Home from "../screen/home/Home";
-import Profile from '../screen/profile/Profile'
-import CreatePost from '../screen/createpost/CreatePost'
-import Reel from '../screen/reel/Reel'
+import Profile from "../screen/profile/Profile";
+import CreatePost from "../screen/createpost/CreatePost";
+import Reel from "../screen/reel/Reel";
 import Search from "../screen/search/Search";
 
 const Tab = createBottomTabNavigator();
@@ -13,7 +13,11 @@ const Tab = createBottomTabNavigator();
 export default function HomeNavigation() {
   return (
     <>
-      <StatusBar animated={true} backgroundColor="#ffffff" barStyle='dark-content' />
+      <StatusBar
+        animated={true}
+        backgroundColor="#ffffff"
+        barStyle="dark-content"
+      />
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarShowLabel: false,
@@ -29,7 +33,7 @@ export default function HomeNavigation() {
               iconName = focused ? "md-add-circle-outline" : "md-add-circle";
             } else if (route.name === "Reel") {
               iconName = focused ? "film-outline" : "film";
-            } else if (route.name === "Profile") {
+            } else if (route.name === "ProfileNavigation") {
               iconName = focused ? "person-outline" : "person-sharp";
             }
             // You can return any component that you like here!
@@ -42,7 +46,7 @@ export default function HomeNavigation() {
         <Tab.Screen name="Search" component={Search} />
         <Tab.Screen name="CreatePost" component={CreatePost} />
         <Tab.Screen name="Reel" component={Reel} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="ProfileNavigation" component={ProfileNavigation} />
       </Tab.Navigator>
     </>
   );
