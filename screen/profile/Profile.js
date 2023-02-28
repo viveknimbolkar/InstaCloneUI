@@ -83,7 +83,7 @@ function Profile({ navigation, route }) {
           >
             <View>
               <List.Item
-              onPress={()=>navigation.navigate('SettingsIndexNavigation')}
+              onPress={()=>navigation.navigate('SettingsPage')}
                 titleStyle={styles.popOverTitle}
                 title="Settings"
                 left={(props) => (

@@ -6,7 +6,7 @@ import Feather from "react-native-vector-icons/Feather";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Entypo from "react-native-vector-icons/Entypo";
-function SettingsPage() {
+function SettingsPage({navigation}) {
   return (
     <>
       <ScrollView style={styles.mainContainer}>
@@ -15,6 +15,7 @@ function SettingsPage() {
           left={(props) => <Feather size={25} name="user-plus" />}
         />
         <List.Item
+        onPress={()=>navigation.navigate('NotificationSettingsNavigation')}
           title="Notifications"
           left={(props) => (
             <Ionicons size={25} name="ios-notifications-outline" />
