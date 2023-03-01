@@ -22,39 +22,45 @@ function NotificationSettings({ navigation }) {
         )}
       />
       <List.Item
-      
-      onPress={() => navigation.navigate("FollowingAndFollowersSetings")}
+        onPress={() => navigation.navigate("FollowingAndFollowersSetings")}
         title="Following and followers"
         left={(props) => <Feather size={25} name="lock" />}
       />
 
       <List.Item
+        onPress={() => navigation.navigate("MessagesSettings")}
         title="Messages"
         left={(props) => <Feather size={25} name="users" />}
       />
       <List.Item
+        onPress={() => navigation.navigate("CallsSettings")}
         title="Calls"
         left={(props) => <MaterialCommunityIcons size={25} name="security" />}
       />
       <List.Item
+        onPress={() => navigation.navigate("LiveAndReelsSettings")}
         title="Live and reels"
         left={(props) => <AntDesign size={25} name="database" />}
       />
       <List.Item
+        onPress={() => navigation.navigate("FundraisersSettings")}
         title="Fundraisers"
         left={(props) => (
           <MaterialCommunityIcons size={25} name="advertisements" />
         )}
       />
       <List.Item
+        onPress={() => navigation.navigate("FromInstagramSettings")}
         title="From instagram"
         left={(props) => <AntDesign size={25} name="login" />}
       />
       <List.Item
+        onPress={() => navigation.navigate("EmailNotificationSettings")}
         title="Email notifications"
         left={(props) => <Entypo size={25} name="help" />}
       />
       <List.Item
+        onPress={() => navigation.navigate("ShoppingSettings")}
         title="Shopping"
         left={(props) => (
           <Ionicons size={25} name="information-circle-outline" />

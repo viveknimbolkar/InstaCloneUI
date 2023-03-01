@@ -7,6 +7,13 @@ import NotificationSettingsPage from "./settings/notification/NotificationSettin
 import NotificationSettings from "./settings/notification/NotificationSettingsPage";
 import PostsStoriesAndCommentsSettings from "./settings/notification/poststoriescomments/PostsStoriesAndCommentsSettings";
 import FollowingAndFollowers from "./settings/notification/followingandfollowers/FollowingAndFollowers.js";
+import MessagesSettings from "./settings/notification/messages/MessagesSettings";
+import CallsSettings from "./settings/notification/calls/CallsSettings";
+import LiveAndReelsSettings from "./settings/notification/liveandreels/LiveAndReelsSettings";
+import FundraisersSettings from "./settings/notification/fundraisers/FundraisersSettings";
+import FromInstagramSettings from "./settings/notification/frominstagram/FromInstagramSettings";
+import EmailNotificationSettings from "./settings/notification/emailnotification/EmailNotificationSettings";
+import ShoppingSettings from "./settings/notification/shopping/ShoppingSettings";
 const Stack = createStackNavigator();
 
 export default function MenuNavigation() {
@@ -29,6 +36,7 @@ export default function MenuNavigation() {
           name="SettingsPage"
           component={SettingsPage}
         />
+        {/* notification settings */}
         <Stack.Screen
           name="NotificationSettingsNavigation"
           options={{ headerTitle: "Notifications" }}
@@ -44,11 +52,49 @@ export default function MenuNavigation() {
           options={{ headerTitle: "Posts Stories And Comments" }}
           component={PostsStoriesAndCommentsSettings}
         />
+
+        <Stack.Screen
+          name="MessagesSettings"
+          options={{ headerTitle: "Messagess" }}
+          component={MessagesSettings}
+        />
         <Stack.Screen
           name="FollowingAndFollowersSetings"
           options={{ headerTitle: "Followers and Followinngs" }}
           component={FollowingAndFollowers}
         />
+        <Stack.Screen
+          name="CallsSettings"
+          options={{ headerTitle: "Calls" }}
+          component={CallsSettings}
+        />
+        <Stack.Screen
+          name="LiveAndReelsSettings"
+          options={{ headerTitle: "Live and reels" }}
+          component={LiveAndReelsSettings}
+        />
+        <Stack.Screen
+          name="FundraisersSettings"
+          options={{ headerTitle: "Fundraisers" }}
+          component={FundraisersSettings}
+        />
+        <Stack.Screen
+          name="FromInstagramSettings"
+          options={{ headerTitle: "From Instagram" }}
+          component={FromInstagramSettings}
+        />
+        <Stack.Screen
+          name="EmailNotificationSettings"
+          options={{ headerTitle: "Email notification" }}
+          component={EmailNotificationSettings}
+        />
+        <Stack.Screen
+          name="ShoppingSettings"
+          options={{ headerTitle: "Shopping" }}
+          component={ShoppingSettings}
+        />
+
+        {/* privacy */}
       </Stack.Navigator>
     </>
   );
